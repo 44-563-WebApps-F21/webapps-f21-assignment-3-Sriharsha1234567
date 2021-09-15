@@ -53,5 +53,30 @@
              <td>$6.00</td>
          </tr>
      </table>
+     <hr>
+        <h4>Code Display</h4>
+        <blockquote>
+            In graph theory, a component of an undirected graph is an induced subgraph 
+            in which any two vertices are connected to each other by paths, 
+            and which is connected to no additional vertices in the rest of the graph. 
+            For example, the graph shown in the illustration has three components. 
+            A vertex with no incident edges is itself a component. 
+            Components are also sometimes called connected components.
+        </blockquote>
+        <a href="https://en.wikipedia.org/wiki/Fibonacci_number"> Source code link</a>
+            <pre>
+                pair<int, int> fib (int n) {
+                    if (n == 0)
+                        return {0, 1};
+                
+                    auto p = fib(n >> 1);
+                    int c = p.first * (2 * p.second - p.first);
+                    int d = p.first * p.first + p.second * p.second;
+                    if (n & 1)
+                        return {d, c + d};
+                    else
+                        return {c, d};
+                }
+            </pre>>    
 </body>
 </html>
